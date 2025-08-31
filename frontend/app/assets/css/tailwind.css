@@ -1,0 +1,4 @@
+/**
+TODO: Should configure tailwind in core because this won't work if i split layers into multiple packages
+*/
+@import "tailwindcss" source('../../..');

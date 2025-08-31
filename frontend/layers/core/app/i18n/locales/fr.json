@@ -1,0 +1,13 @@
+{
+  "common": {
+    "success": "Succès",
+    "error": "Erreur",
+    "confirm": "Confirmer",
+    "cancel": "Annuler"
+  },
+  "components": {
+    "langSwitcher": {
+      "label": "Langue"
+    }
+  }
+}

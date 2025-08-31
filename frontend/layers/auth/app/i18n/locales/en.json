@@ -1,0 +1,58 @@
+{
+  "pages": {
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Manage your settings"
+    },
+    "login": {
+      "title": "Login",
+      "description": "Login to your account",
+      "email": "Email",
+      "password": "Password",
+      "signIn": "Sign in",
+      "orContinueWith": "Or continue with",
+      "loginWithGoogle": "Login with Google",
+      "loginWithMeta": "Login with Meta",
+      "loginWithApple": "Login with Apple",
+      "signUp": "Sign up",
+      "dontHaveAccount": "Don't have an account ?",
+      "forgotPassword": "Forgot password?",
+      "loginSuccess": "Login successful",
+      "loginError": "Login failed",
+      "rememberMe": "Remember me"
+    },
+    "register": {
+      "title": "Register",
+      "description": "Register to your account",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "signIn": "Sign in",
+      "orContinueWith": "Or continue with",
+      "loginWithGoogle": "Login with Google",
+      "loginWithMeta": "Login with Meta",
+      "loginWithApple": "Login with Apple",
+      "alreadyHaveAccount": "Already have an account ?",
+      "signUp": "Sign up",
+      "registerSuccess": "Register successful",
+      "registerError": "Register failed"
+    },
+    "forgot-password": {
+      "title": "Forgot password",
+      "description": "Enter your email to reset your password",
+      "email": "Email",
+      "send": "Send",
+      "success": "Email sent successfully",
+      "error": "An error occurred",
+      "back": "Back to login"
+    },
+    "reset-password": {
+      "title": "Reset password",
+      "description": "Enter your new password",
+      "newPassword": "New password",
+      "send": "Send",
+      "success": "Password reset successfully",
+      "error": "An error occurred"
+    }
+  }
+}

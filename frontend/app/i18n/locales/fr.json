@@ -1,0 +1,8 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "logout": "Se déconnecter",
+    "logoutMessage": "Êtes-vous sûr de vouloir vous déconnecter ?",
+    "settings": "Paramètres"
+  }
+}
