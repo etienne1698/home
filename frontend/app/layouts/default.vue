@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Home, List as ListIcon, LogOut, Menu as MenuIcon, Settings } from "lucide-vue-next";
+import { Home, List, LogOut, Menu as MenuIcon, Settings } from "lucide-vue-next";
 
 const { t } = useI18n();
 const auth = useAuth();
@@ -30,6 +30,11 @@ const links = computed(() => [
     to: "/",
     label: t("nav.home"),
     icon: Home,
+  },
+  {
+    to: "/recipes",
+    label: t("nav.recipes"),
+    icon: List,
   },
 ]);
 </script>

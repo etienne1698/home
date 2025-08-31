@@ -1,13 +1,17 @@
-const publicRoutes = ["/login", "/register", "/forgot-password", "/reset-password"];
-
 export default defineNuxtRouteMiddleware((to, from) => {
   const { isAuthenticated } = useAuth();
+  const localePath = useLocalePath();
+
+  const publicRoutes = [
+    localePath("/login"),
+    localePath("/register"),
+    localePath("/forgot-password"),
+    localePath("/reset-password"),
+  ];
 
   if (publicRoutes.includes(to.path) && isAuthenticated.value) {
-    return navigateTo("/");
-  }
-
-  if (!publicRoutes.includes(to.path) && !isAuthenticated.value) {
-    return navigateTo("/login");
+    return navigateTo(localePath("/"));
+  } else if (!publicRoutes.includes(to.path) && !isAuthenticated.value) {
+    return navigateTo(localePath("/login"));
   }
 });
