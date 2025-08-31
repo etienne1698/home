@@ -17,4 +17,15 @@ export class RecipeRepositorySql implements RecipeRepository {
         })
     );
   }
+
+  async create(recipe: Omit<Recipe, "id" | "createdAt" | "updatedAt">) {
+    const result = await db.insert(recipesTable).values(recipe).returning();
+    return new Recipe({
+      id: result[0].id,
+      title: result[0].title,
+      description: result[0].description,
+      createdAt: result[0].createdAt,
+      updatedAt: result[0].updatedAt,
+    });
+  }
 }
