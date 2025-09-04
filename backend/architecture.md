@@ -19,20 +19,23 @@ It provides reusable building blocks for configuration, infrastructure, utilitie
 ## modules
 
 Each module represents a **domain (DDD bounded context)**.  
-A module is split into **Domain**, **Infrastructure**, and **Drivers** layers. (this layers are not separated into folders)
 
-### Domain
+Inside a module, the code is organized following the **Hexagonal Architecture (Ports & Adapters)**:  
+- The **business logic (domain)** is at the center (pure, framework-agnostic).  
+- The **infrastructure** provides technical implementations of the domain’s ports.  
+- The **drivers** expose the domain to the outside world (HTTP, CLI, etc.).  
 
+These layers are separated by **file naming conventions**, not by folders, to keep the module flat and easy to navigate.
+
+#### Domain (business logic)
 - `*.service.ts` → Business services (domain use cases, orchestration of entities).
 - `*.entity.ts` → Entities and value objects (core domain models).
 - `*.repository.ts` → Repository interface (port): defines how the domain accesses persistence.
 
-### Infrastructure
-
+#### Infrastructure
 - `*.repository-sql.ts` → SQL repository implementation (adapter for `*.repository.ts` using [Drizzle ORM](https://orm.drizzle.team/)).
 - `*.sql.ts` → Database schema & mappings (using [Drizzle ORM](https://orm.drizzle.team/)).
 
-### Drivers
-
+#### Drivers
 - `*.routes.ts` → HTTP controllers (maps HTTP requests to domain use cases).
 - `*.dto.ts` → Data Transfer Objects (validation, serialization, and request/response shapes).
