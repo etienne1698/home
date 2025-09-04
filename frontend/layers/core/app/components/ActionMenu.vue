@@ -4,7 +4,7 @@ import type { Placement } from "@floating-ui/vue";
 
 interface ActionMenuProps {
   actions: Action[];
-  placement: Placement;
+  placement: Placement & string;
   fullWidth?: boolean;
 }
 

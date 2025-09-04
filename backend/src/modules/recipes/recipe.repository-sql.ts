@@ -1,4 +1,4 @@
-import { db } from "~/shared/database";
+import { db } from "~/shared/infrastructure/database";
 import { recipesTable } from "./recipe.sql";
 import type { RecipeRepository } from "./recipe.repository";
 import type { Recipe } from "./recipe.entity";

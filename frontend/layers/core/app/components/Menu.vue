@@ -13,7 +13,7 @@ import {
 import { onClickOutside } from '@vueuse/core'
 
 const props = withDefaults(defineProps<{
-  placement?: Placement,
+  placement?: Placement & string,
   strategy?: Strategy,
   offset?: number,
   fullWidth?: boolean
