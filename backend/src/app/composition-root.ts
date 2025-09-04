@@ -1,8 +1,8 @@
-import { authRouter } from "../modules/auth/auth.routes";
+import { authRouter } from "~/modules/auth/auth.routes";
 
-import { RecipeRepositorySql } from "../modules/recipes/recipe.repository-sql";
-import { recipeRouter } from "../modules/recipes/recipe.routes";
-import { RecipeService } from "../modules/recipes/recipe.service";
+import { RecipeRepositorySql } from "~/modules/recipes/recipe.repository-sql";
+import { recipeRouter } from "~/modules/recipes/recipe.routes";
+import { RecipeService } from "~/modules/recipes/recipe.service";
 
 export const appAuthRouter = authRouter();
 
